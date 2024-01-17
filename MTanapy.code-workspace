@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../easiroc_macro/data/tool/analysismuon_original/muo"
+		}
+	],
+	"settings": {}
+}
