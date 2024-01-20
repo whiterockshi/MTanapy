@@ -663,10 +663,13 @@ class EventFilterNewDetector(EventFilter):
             input_root_path:str,
             conf_geometry:GeometryConfig,
             th_MeV:float=0.,
+            # This line can add new New detector argument
         ):
+        # this super().__init__... reinitialize argument that EventFilter class have in common
         super().__init__(analysis_name, input_root_path, conf_geometry, th_MeV)
-        self.events = self._correct_layer_order()
-        self.events = self._filter_empty_events()
-        self.events = self._get_events_all_layer_passed()
-        self.hitchannels, self.hitmaps = self.get_hits()
-        
+        self.events = super()._root_to_numpy()
+
+
+
+    def confirm_heritage(self):
+        print("Hello EventFilterNewDetector!")
